@@ -1,5 +1,7 @@
 /*
-    ESP32 MLX90640 Tire Thermal Node
+
+    traviscea DIY ESP32 Thermal Tire Temperature – Version 1.0
+    Copyright (c) 2026 Travis Way
     ------------------------------------------------
 
     FEATURES
