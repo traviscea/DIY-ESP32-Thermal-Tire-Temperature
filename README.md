@@ -57,12 +57,11 @@ A separate ESP32 receiver/display unit can then:
 
 | Component               | Qty         | Notes                    |
 | ----------------------- | ----------- | ------------------------ |
-| ESP32 Dev Board         | 1 per wheel | ESP32 lite recommended   |
+| ESP32 Dev Board         | 1 per wheel | ESP32 lite w/ jst recommended   |
 | MLX90640 Thermal Camera | 1 per wheel | 55° or 110° FOV          |
 | LiPo Battery            | 1           | 2000mah recommended      |
 | Power Switch            | 1           |                          |
-| Enclosure               | 1           | Heat resistant preferred |
-| JST Connectors          | Optional    | For removable battery    |
+| Enclosure               | 1           | Heat resistant preferred PETG or ASA |
 | Mounting Hardware       | Optional    | Depends on vehicle       |
 
 ---
@@ -78,6 +77,13 @@ Other Thermal Camera link if first is sold out https://www.amazon.com/dp/B0F312V
 3. 2000mah battery 4 pack https://www.amazon.com/dp/B0FR9GH966?th=1&linkCode=ll2&tag=traviscea05-20&linkId=ce733239115802f7ae2e96530c1f4ace&language=en_US&ref_=as_li_ss_tl
 4. Usb extension cable x4 needed https://www.amazon.com/dp/B08BYRH9DR?th=1&linkCode=ll2&tag=traviscea05-20&linkId=64e65b45900524723d50228c386b2803&language=en_US&ref_=as_li_ss_tl
 6. Rocker switches 10pk https://www.amazon.com/dp/B07S2QJKTX?&linkCode=ll2&tag=traviscea05-20&linkId=7190de449726856cee2a4f0f23969745&language=en_US&ref_=as_li_ss_tl
+
+---
+
+# 3d print files
+
+3d print file for mount
+https://drive.google.com/file/d/1aso5gM7PM5rLHeJS4tMDzWUVYjjKrLWI/view?usp=drive_link
 
 ---
 
