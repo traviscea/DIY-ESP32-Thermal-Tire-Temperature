@@ -72,8 +72,8 @@ Disclaimer: Some of the links below are affiliate links, which means I may earn 
 As an Amazon Associate I earn from qualifying purchases.
 
 1. Esp32 Lites 4 pack  https://www.amazon.com/dp/B0BZP3GXT7?th=1&linkCode=ll2&tag=traviscea05-20&linkId=61597949ec335a3ab2f504bd427caaa9&language=en_US&ref_=as_li_ss_tl
-2. Thermal Camera(MLX90640) x4 needed https://www.amazon.com/dp/B07ZKK8QWY?&linkCode=ll2&tag=traviscea05-20&linkId=89015596541410dd8700740aabaff986&language=en_US&ref_=as_li_ss_tl <br>
-Other Thermal Camera link if first is sold out https://www.amazon.com/dp/B0F312VWW3?&linkCode=ll2&tag=traviscea05-20&linkId=9bcd7ac8df73fbbeacc3a000f99c4359&language=en_US&ref_=as_li_ss_tl
+2. 55° Thermal Camera(MLX90640) x4 needed https://www.amazon.com/dp/B07ZKK8QWY?&linkCode=ll2&tag=traviscea05-20&linkId=89015596541410dd8700740aabaff986&language=en_US&ref_=as_li_ss_tl <br>
+Other 55° Thermal Camera link if first is sold out https://www.amazon.com/dp/B0F312VWW3?&linkCode=ll2&tag=traviscea05-20&linkId=9bcd7ac8df73fbbeacc3a000f99c4359&language=en_US&ref_=as_li_ss_tl
 3. 2000mah battery 4 pack https://www.amazon.com/dp/B0FR9GH966?th=1&linkCode=ll2&tag=traviscea05-20&linkId=ce733239115802f7ae2e96530c1f4ace&language=en_US&ref_=as_li_ss_tl
 4. Usb extension cable x4 needed https://www.amazon.com/dp/B08BYRH9DR?th=1&linkCode=ll2&tag=traviscea05-20&linkId=64e65b45900524723d50228c386b2803&language=en_US&ref_=as_li_ss_tl
 6. Rocker switches 10pk https://www.amazon.com/dp/B07S2QJKTX?&linkCode=ll2&tag=traviscea05-20&linkId=7190de449726856cee2a4f0f23969745&language=en_US&ref_=as_li_ss_tl
