@@ -57,11 +57,10 @@ A separate ESP32 receiver/display unit can then:
 
 | Component               | Qty         | Notes                    |
 | ----------------------- | ----------- | ------------------------ |
-| ESP32 Dev Board         | 1 per wheel | ESP32-WROOM recommended  |
+| ESP32 Dev Board         | 1 per wheel | ESP32 lite recommended   |
 | MLX90640 Thermal Camera | 1 per wheel | 55° or 110° FOV          |
-| LiPo Battery            | 1           | 1S recommended           |
-| 5V Boost Converter      | 1           | If needed                |
-| Power Switch            | 1           | Optional                 |
+| LiPo Battery            | 1           | 2000mah recommended      |
+| Power Switch            | 1           |                          |
 | Enclosure               | 1           | Heat resistant preferred |
 | JST Connectors          | Optional    | For removable battery    |
 | Mounting Hardware       | Optional    | Depends on vehicle       |
@@ -69,51 +68,16 @@ A separate ESP32 receiver/display unit can then:
 ---
 
 # Recommended Parts
+Disclaimer: Some of the links below are affiliate links, which means I may earn a commission at no extra cost to you.
 
-## ESP32
+As an Amazon Associate I earn from qualifying purchases.
 
-Recommended:
-
-* ESP32-WROOM
-* ESP32-S3
-
-Avoid:
-
-* Cheap clone boards with weak regulators
-
----
-
-## Thermal Camera
-
-### 55 Degree MLX90640
-
-Pros:
-
-* Higher effective resolution on tire
-* Better tread detail
-
-Cons:
-
-* Must mount farther away
-
-Best for:
-
-* Tight tread analysis
-
-### 110 Degree MLX90640
-
-Pros:
-
-* Wider coverage
-* Easier mounting
-
-Cons:
-
-* Lower effective tread resolution
-
-Best for:
-
-* General-purpose use
+1. Esp32 Lites 4 pack  https://www.amazon.com/dp/B0BZP3GXT7?th=1&linkCode=ll2&tag=traviscea05-20&linkId=61597949ec335a3ab2f504bd427caaa9&language=en_US&ref_=as_li_ss_tl
+2. Thermal Camera(MLX90640) x4 needed https://www.amazon.com/dp/B07ZKK8QWY?&linkCode=ll2&tag=traviscea05-20&linkId=89015596541410dd8700740aabaff986&language=en_US&ref_=as_li_ss_tl <br>
+Other Thermal Camera link if first is sold out https://www.amazon.com/dp/B0F312VWW3?&linkCode=ll2&tag=traviscea05-20&linkId=9bcd7ac8df73fbbeacc3a000f99c4359&language=en_US&ref_=as_li_ss_tl
+3. 2000mah battery 4 pack https://www.amazon.com/dp/B0FR9GH966?th=1&linkCode=ll2&tag=traviscea05-20&linkId=ce733239115802f7ae2e96530c1f4ace&language=en_US&ref_=as_li_ss_tl
+4. Usb extension cable x4 needed https://www.amazon.com/dp/B08BYRH9DR?th=1&linkCode=ll2&tag=traviscea05-20&linkId=64e65b45900524723d50228c386b2803&language=en_US&ref_=as_li_ss_tl
+6. Rocker switches 10pk https://www.amazon.com/dp/B07S2QJKTX?&linkCode=ll2&tag=traviscea05-20&linkId=7190de449726856cee2a4f0f23969745&language=en_US&ref_=as_li_ss_tl
 
 ---
 
