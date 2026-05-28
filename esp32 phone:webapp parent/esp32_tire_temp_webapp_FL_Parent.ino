@@ -1,20 +1,28 @@
-// =====================================================
-// FL MASTER NODE
-// =====================================================
-//
-// FEATURES
-// -----------------------------------------------------
-// - FL thermal camera node
-// - Receives FR/RL/RR ESP-NOW packets
-// - Hosts phone dashboard webpage
-// - Hosts calibration webpage
-// - 4 tire live dashboard
-// - LVGL-style thermal widgets
-//
-// GPIO0 LOW  = Calibration Mode
-// GPIO0 HIGH = Runtime Dashboard Mode
-//
-// =====================================================
+/*
+
+traviscea DIY ESP32 Thermal Tire Temperature – Version 1.0
+Copyright (c) 2026 Travis Way
+
+
+=====================================================
+FL MASTER NODE
+=====================================================
+
+FEATURES
+-----------------------------------------------------
+- FL thermal camera node
+- Receives FR/RL/RR ESP-NOW packets
+- Hosts phone dashboard webpage
+- Hosts calibration webpage
+- 4 tire live dashboard
+- LVGL-style thermal widgets
+
+GPIO0 LOW  = Calibration Mode
+GPIO0 HIGH = Runtime Dashboard Mode
+
+=====================================================
+
+*/
 
 #include <WiFi.h>
 #include <esp_now.h>
