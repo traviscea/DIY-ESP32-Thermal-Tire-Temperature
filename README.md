@@ -4,6 +4,8 @@ A DIY motorsport tire temperature monitoring system using ESP32 microcontrollers
 
 This project provides real-time multi-zone tread temperature analysis for track cars, race cars, and high-performance driving applications without requiring contact probes or expensive commercial equipment.
 
+Full how-to walkthrough: https://youtu.be/BBLoeDo5oM8
+
 ---
 
 # Features
