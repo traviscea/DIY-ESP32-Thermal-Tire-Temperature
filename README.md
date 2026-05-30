@@ -59,9 +59,9 @@ A separate ESP32 receiver/display unit can then:
 | ----------------------- | ----------- | ------------------------ |
 | ESP32 Dev Board         | 1 per wheel | ESP32 lite w/ jst recommended   |
 | MLX90640 Thermal Camera | 1 per wheel | 55° or 110° FOV          |
-| LiPo Battery            | 1           | 2000mah recommended      |
-| Power Switch            | 1           |                          |
-| Enclosure               | 1           | Heat resistant preferred PETG or ASA |
+| LiPo Battery            | 1 per wheel          | 2000mah recommended      |
+| Power Switch            | 2 per wheel           |                          |
+| Enclosure               | 1 per wheel          | Heat resistant preferred PETG or ASA |
 | Mounting Hardware       | Optional    | Depends on vehicle       |
 
 ---
