@@ -1,4 +1,8 @@
 /* 
+
+ traviscea DIY ESP32 Thermal Tire Temperature – Version 1.0
+ Copyright (c) 2026 Travis Way
+
  FL MASTER NODE
 
  FEATURES
