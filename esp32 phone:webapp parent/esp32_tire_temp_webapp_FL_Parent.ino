@@ -1,27 +1,35 @@
-/*
+/* 
+ FL MASTER NODE
 
-traviscea DIY ESP32 Thermal Tire Temperature – Version 1.0
-Copyright (c) 2026 Travis Way
+ FEATURES
+ -----------------------------------------------------
+ - FL thermal camera node
+ - Receives FR/RL/RR ESP-NOW packets
+ - Hosts phone dashboard webpage
+ - Hosts calibration webpage
+ - 4 tire live dashboard
+ - LVGL-style thermal widgets
 
+    MODES
+    ------------------------------------------------
+    GPIO 0 LOW  = Calibration Web Viewer
+    GPIO 0 HIGH = ESP-NOW Runtime
 
-=====================================================
-FL MASTER NODE
-=====================================================
+    WIRING
+    ------------------------------------------------
+    MLX90640:
+        SDA -> GPIO 23
+        SCL -> GPIO 19
 
-FEATURES
------------------------------------------------------
-- FL thermal camera node
-- Receives FR/RL/RR ESP-NOW packets
-- Hosts phone dashboard webpage
-- Hosts calibration webpage
-- 4 tire live dashboard
-- LVGL-style thermal widgets
+    Calibration Jumper:
+        GPIO0 -> GND
 
-GPIO0 LOW  = Calibration Mode
-GPIO0 HIGH = Runtime Dashboard Mode
-
-=====================================================
-
+    REQUIRED LIBRARIES
+    ------------------------------------------------
+    - Adafruit MLX90640
+    - ESP Async WebServer
+    - Async TCP
+//
 */
 
 #include <WiFi.h>
@@ -825,9 +833,10 @@ body {
     font-family:Arial;
 
     width:100vw;
-    height:100vh;
+    min-height:100vh;
 
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
 
 .title {
@@ -870,9 +879,8 @@ canvas {
 }
 
 .container {
-
     width:100%;
-    height:calc(100% - 70px);
+    min-height:calc(100vh - 70px);
 
     display:grid;
 
@@ -1088,13 +1096,40 @@ canvas {
     font-weight:bold;
 }
 
+#unitsBtn {
+
+    display:block;
+
+    width:calc(100% - 20px);
+
+    height:50px;
+
+    margin:10px auto;
+
+    font-size:36px;
+    font-weight:900;
+
+    border-radius:20px;
+
+    border:2px solid #555;
+
+    background:#151515;
+    color:white;
+
+    cursor:pointer;
+
+    box-sizing:border-box;
+}
+
 </style>
 </head>
 <body>
 
-<div class="title">
-    DIY TIRE TEMPERATURE DISPLAY
-</div>
+
+  <button id="unitsBtn">
+    °F
+  </button>
+
 
 <div class="container">
 
@@ -1107,11 +1142,11 @@ canvas {
 <div class="legendBar"></div>
 
 <div class="legendLabels">
-<div>70</div>
-<div>100</div>
-<div>140</div>
-<div>180</div>
-<div>220</div>
+<div id="l0">70</div>
+<div id="l1">100</div>
+<div id="l2">140</div>
+<div id="l3">180</div>
+<div id="l4">220</div>
 </div>
 
 </div>
@@ -1122,10 +1157,42 @@ canvas {
 
 <script>
 
+let useCelsius = false;
+
 const socket =
     new WebSocket(
         `ws://${location.host}/ws`
     );
+
+
+function displayTemp(tempF){
+    if(useCelsius)
+    {
+        return (
+            (tempF - 32)
+            * 5.0
+            / 9.0
+        );
+    }
+
+    return tempF;
+}
+
+function updateLegend() {
+    if(useCelsius) {
+        document.getElementById("l0").innerText = "21";
+        document.getElementById("l1").innerText = "38";
+        document.getElementById("l2").innerText = "60";
+        document.getElementById("l3").innerText = "82";
+        document.getElementById("l4").innerText = "104";
+    } else {
+        document.getElementById("l0").innerText = "70";
+        document.getElementById("l1").innerText = "100";
+        document.getElementById("l2").innerText = "140";
+        document.getElementById("l3").innerText = "180";
+        document.getElementById("l4").innerText = "220";
+    }
+}
 
 function createTireHTML(label,index)
 {
@@ -1157,12 +1224,21 @@ function createTireHTML(label,index)
 
         <div class="footer">
             HOT:
-            <span id="h${index}">0</span>F
+            <span id="h${index}">0</span>
+            <span id="u${index}">F</span>
         </div>
-
     </div>
     `;
 }
+
+document.getElementById("unitsBtn").onclick = () => {
+    useCelsius =
+        !useCelsius;
+    updateLegend();
+    document.getElementById("unitsBtn").innerText =
+        useCelsius ? "°C" : "°F";
+};
+
 
 document.getElementById("topLeft").innerHTML =
     createTireHTML("FL",0);
@@ -1221,9 +1297,8 @@ socket.onmessage = (event)=>
                 'black';
         }
 
-        document.getElementById(`h${i}`).innerText =
-            tire.hot.toFixed(1);
-
+        document.getElementById(`h${i}`).innerText = displayTemp(tire.hot).toFixed(1);
+        document.getElementById(`u${i}`).innerText = useCelsius ? "C" : "F";
         const fill =
             document.getElementById(`b${i}`);
 
