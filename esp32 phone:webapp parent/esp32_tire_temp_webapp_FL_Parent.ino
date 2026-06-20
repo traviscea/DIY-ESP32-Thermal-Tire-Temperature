@@ -2,7 +2,6 @@
 
  traviscea DIY ESP32 Thermal Tire Temperature – Version 1.0
  Copyright (c) 2026 Travis Way
-
  FL MASTER NODE
 
  FEATURES
@@ -247,6 +246,7 @@ const char calibration_html[] PROGMEM = R"rawliteral(
 <head>
 
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>Tire Calibration</title>
 
@@ -268,6 +268,18 @@ body {
 
     font-family:Arial;
     color:white;
+}
+
+#thermal {
+
+    width:95vw;
+    max-width:800px;
+
+    height:auto;
+
+    image-rendering:pixelated;
+
+    border:2px solid white;
 }
 
 .info {
@@ -295,22 +307,20 @@ body {
 
 <div class="info">
 
-<div>
-HIGH:
-<span id="high">0</span>F
-</div>
+  <div>
+  HIGH:
+    <span id="high">0</span>F
+  </div>
 
-<div>
-LOW:
-<span id="low">0</span>F
-</div>
+  <div>
+  LOW:
+    <span id="low">0</span>F
+  </div>
 
-<div>
-BAT:
-<span id="battery">0</span>
-</div>
-
-</div>
+  <div>
+  BAT:
+    <span id="battery">0</span>
+  </div>
 
 </div>
 
